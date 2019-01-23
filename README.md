@@ -32,4 +32,7 @@ End: =IF(C5="Facebook",VLOOKUP(D5,'FB-IG Ads Manager'!$C:$Y,12,FALSE),IF('Totals
 [Program Name]
 =VLOOKUP(D5,'Lookup Reference Sheet'!$C:$F,4,FALSE)
 
+[Lead Form]
+=IF(C5="Facebook",VLOOKUP(D5,'FB1'!$C:$CC,19,FALSE),IF('Totals Sheet'!C5="Instagram",VLOOKUP(D5,'FB1'!$C:$CC,19,FALSE),IF('Totals Sheet'!C5="LinkedIn",VLOOKUP('Totals Sheet'!D5,'LinkedIn Ads Manager'!$K:$CA,52,FALSE),IF('Totals Sheet'!C5="Twitter",VLOOKUP(D5,'Twitter Ads Manager'!$C:$P,10,FALSE),"-"))))
+
 
