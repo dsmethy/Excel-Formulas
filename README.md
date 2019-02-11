@@ -36,4 +36,5 @@ End: =IF(C5="Facebook",VLOOKUP(D5,'FB-IG Ads Manager'!$C:$Y,12,FALSE),IF('Totals
 [Lead Form]
 =IF(C5="Facebook",VLOOKUP(D5,'FB1'!$C:$CC,19,FALSE),IF('Totals Sheet'!C5="Instagram",VLOOKUP(D5,'FB1'!$C:$CC,19,FALSE),IF('Totals Sheet'!C5="LinkedIn",VLOOKUP('Totals Sheet'!D5,'LinkedIn Ads Manager'!$K:$CA,52,FALSE),"-")))
 
-
+[Sessions]
+=IF('Totals Sheet'!C7='Facebook',VLOOKUP('Totals Sheet'!E7,'GA Facebook'!$D:$M,2,FALSE),IF('Totals Sheet'!C7='Instagram',VLOOKUP('Totals Sheet'!E7,'GA Instagram'!$D:$M,2,FALSE),IF('Totals Sheet'!C7='LinkedIn',VLOOKUP('Totals Sheet'!E7,'GA LinkedIn'!$D:$M,2,FALSE),IF('Totals Sheet'!C7='Twitter',VLOOKUP('Totals Sheet'!E7,'GA Twitter'!$D:$M,2,FALSE),"-"))))
