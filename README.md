@@ -27,6 +27,10 @@ End: =IF(C5="Facebook",VLOOKUP(D5,'FB-IG Ads Manager'!$C:$Y,12,FALSE),IF('Totals
 [Start Date]
 =IF(C5="Facebook",VLOOKUP(D5,'FB-IG Ads Manager'!$C:$V,20,FALSE),IF(C5="Instagram",VLOOKUP(D5,'FB-IG Ads Manager'!$C:$Y,20,FALSE),IF(C5="LinkedIn",VLOOKUP(D5,'LinkedIn Ads Manager'!$K:$M,2,FALSE),IF(C5="Twitter",VLOOKUP(D5,'Twitter Ads Manager'!$C:$W,10,FALSE),"-"))))
 
+potential: =IF(Sheet8!A4='Totals Sheet (2)'!A:A,MIN('Totals Sheet (2)'!G:G),"-")
+=MIN(IF(A4='Totals Sheet (2)'!A:A,'Totals Sheet (2)'!G:G,"-"))
+
+
 [End Date]
 =IF(C5="Facebook",VLOOKUP(D5,'FB-IG Ads Manager'!$C:$V,12,FALSE),IF(C5="Instagram",VLOOKUP(D5,'FB-IG Ads Manager'!$C:$Y,12,FALSE),IF(C5="LinkedIn",VLOOKUP(D5,'LinkedIn Ads Manager'!$K:$M,3,FALSE),IF(C5="Twitter",VLOOKUP(D5,'Twitter Ads Manager'!$C:$W,10,FALSE),"-"))))
 
